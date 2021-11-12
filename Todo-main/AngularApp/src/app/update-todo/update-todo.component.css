@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.addTodo {
+  margin-top: 35px;
+}
+input {
+  width: 80%;
+}
+.form-control:focus {
+  box-shadow: none;
+}
+
+input {
+  border: none;
+  border-bottom: black solid 1px;
+}
+
+.select {
+  margin-top: 20px;
+}
+select {
+  border: none;
+  border-bottom: black solid 1px;
+  background-color: white;
+}

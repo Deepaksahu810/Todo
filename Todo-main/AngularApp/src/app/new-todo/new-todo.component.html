@@ -1,0 +1,42 @@
+<div class="row head">
+  <img class="col-md-6" src="../../assets/add.svg" alt="" />
+  <div class="col-md-6">
+    <div class="row addTodo" >
+      <div class="col-md-10">
+        <h2 class="mb-3">Add Todo</h2>
+        <form [formGroup]="TodoForm" (ngSubmit)="onSubmit()">
+          <div class="row mt-4">
+            <div class="col-md-6  mb-3">
+              <label for="lastName">Title</label>
+              <input
+                type="text"
+                class="form-control"
+                formControlName="title"
+              />
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="lastName">Description</label>
+              <input
+                type="text"
+                class="form-control"
+                formControlName="description"
+              />
+            </div>
+          </div>
+          <div class="col-md-6 mb-3 select">
+            <label for="lastName">Status</label>
+            <select formControlName="status">
+              <option class="form-control" value=0>complete</option>
+              <option value=1>incomplete</option>
+              </select>
+          </div>
+          
+          
+          <button class="btn btn-primary p-2" [disabled]="!TodoForm.valid" type="submit">
+            Continue to checkout
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

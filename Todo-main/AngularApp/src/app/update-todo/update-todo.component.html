@@ -1,0 +1,43 @@
+<div *ngIf="data">
+  <div class="row" style="margin-top: 15px;">
+    <img class="col-md-6 img" src="../../assets/update.svg" alt="">
+    <div class="col-md-6">
+        <div class="row addTodo" >
+            <div class="col-md-10">
+              <h4 class="mb-3">Billing address</h4>
+              <form [formGroup]="TodoForm" (ngSubmit)="onSubmit()">
+                <div class="row">
+                  <div class="col-md-6 mb-3 m-1">
+                    <label for="lastName"> name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      formControlName="title"
+                    />
+                  </div>
+                  <div class="col-md-6 mb-3 m-1">
+                    <label for="lastName">Last name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      formControlName="description"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6  mb-3 select" style="margin-left: 5px;">
+                  <label for="lastName">Status</label>
+                  <select formControlName="status" style="margin-left: 5px;">
+                    <option class="form-control" value=0>complete</option>
+                    <option value=1>incomplete</option>
+                    </select>
+                </div>
+                <button class="btn btn-primary m-1 p-2" type="submit">
+                  Continue to checkout
+                </button>
+              </form>
+            </div>
+          </div>
+        
+    </div>
+</div>
+</div>

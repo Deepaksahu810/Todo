@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+   
+  }
+  .todo-content{
+    font-family: 'Poppins', sans-serif;    
+  }
+  
+   .flex-container {
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    .flex-container > div {
+      text-align: center;
+    }
+    
+
+   .card{
+      border: none;
+      border-left: 5px solid #0000;
+      margin-top: 50px;
+      border-radius: 20px;
+      background-color: #f8f8f8;
+      margin: 5px;
+    }
+    
+    
+    .badge-primary{
+      background-color: #e9eeff;
+      color: #4772fe;
+    }
+    
+    .badge-danger{
+      background-color: #fef0f0 ;
+      color: #f04141;
+      margin-top:50px;
+    
+    }
+    
+  
+    
+    .card:hover{
+        background-color: #E8E8E8;
+    }
+  
+    .scrollbar{
+      height: 100px;
+      overflow-y:auto;
+      overflow-x:auto;  
+  }
+  
+  .big-box{
+    height:200px; 
+  }
+  
+  .add{
+      color: white;
+      background: blue;
+      border-radius: 100px;
+      height: 25px;
+      width: 25px;
+      text-align: center;
+      cursor: pointer;
+      margin-right: 10px;
+  
+  }
+  
+.input{
+  margin-left: 10px; 
+  margin-top: 5px; 
+  margin-bottom: 5px;
+  border: none;
+  border-bottom: solid 1px black;
+}
+input:focus{
+  outline: none;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .row{
+    width: 93%;
+  }
+  
+}

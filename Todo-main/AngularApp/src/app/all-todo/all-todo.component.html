@@ -1,0 +1,40 @@
+
+
+<div class="row categories-list">
+  <div class="conatiner">
+  <div class="row">
+    <div class="col-md-3">
+    <input type="text"   class="from-control input" placeholder="search for title" [(ngModel)]="filteredString">
+  </div>
+  </div>
+</div>
+  <div class="col-md-3" *ngFor = 'let AllTodos of AllTodo | filter:filteredString'>
+      <div class="card drop-shadow">
+        <div class="card-body p-3">
+          <div class="todo-content" >
+            <h3 class="mb-2" >{{ AllTodos.title }}</h3>
+            <div class="scrollbar">
+            <small class="text-secondary big-box" > {{ AllTodos.description }}</small>
+            </div>
+        </div>
+        <div class="flex-container" style="margin-top: 10px;">
+            <div>
+            <span [ngClass]="{'badge-danger': AllTodos.status == 1 ,'badge-primary': AllTodos.status == 0 }" >
+                <div *ngIf="AllTodos.status == 0 else elseBlock" >
+                    complete
+                </div>
+                <ng-template #elseBlock>
+                    incomplete
+                </ng-template>
+            </span>
+        </div>
+        <div style="display: flex;">
+          <p routerLink="/TodoUpdate/{{AllTodos.id}}" class="add">+</p>
+          <fa-icon class="icon" [icon]="faCoffee" (click)="delete(AllTodos.id)" ></fa-icon>
+        </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
