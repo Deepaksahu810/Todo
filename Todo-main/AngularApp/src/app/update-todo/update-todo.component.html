@@ -4,11 +4,11 @@
     <div class="col-md-6">
         <div class="row addTodo" >
             <div class="col-md-10">
-              <h4 class="mb-3">Billing address</h4>
+              <h4 class="mb-3">Update Todo</h4>
               <form [formGroup]="TodoForm" (ngSubmit)="onSubmit()">
                 <div class="row">
                   <div class="col-md-6 mb-3 m-1">
-                    <label for="lastName"> name</label>
+                    <label for="lastName">title</label>
                     <input
                       type="text"
                       class="form-control"
@@ -16,7 +16,7 @@
                     />
                   </div>
                   <div class="col-md-6 mb-3 m-1">
-                    <label for="lastName">Last name</label>
+                    <label for="lastName">Description</label>
                     <input
                       type="text"
                       class="form-control"
@@ -32,7 +32,7 @@
                     </select>
                 </div>
                 <button class="btn btn-primary m-1 p-2" type="submit">
-                  Continue to checkout
+                  Continue
                 </button>
               </form>
             </div>
